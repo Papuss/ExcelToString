@@ -1,8 +1,8 @@
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,10 +15,10 @@ public class Main {
 
         try
         {
-            FileInputStream file = new FileInputStream(new File("C:\\CodeCool\\numberss.xls"));
+            FileInputStream file = new FileInputStream(new File("C:\\CodeCool\\numbers.xlsx"));
 
             //Create Workbook instance holding reference to .xlsx file
-            Workbook workbook = new HSSFWorkbook(file);
+            Workbook workbook = new XSSFWorkbook (file);
 
             //Get first/desired sheet from the workbook
             Sheet sheet = workbook.getSheetAt(0);
